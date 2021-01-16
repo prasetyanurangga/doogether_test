@@ -50,7 +50,7 @@ $config = [
             'enableAutoLogin' => true,
         ],
         'errorHandler' => [
-            'errorAction' => 'api/error',
+            'errorAction' => 'site/error',
         ],
         'mailer' => [
             'class' => 'yii\swiftmailer\Mailer',
@@ -74,14 +74,16 @@ $config = [
             'enablePrettyUrl' => true,
             'showScriptName' => false,
             'rules' => [
-                'login' => 'api/login',
-                'register' => 'api/register',
+                'logout' => 'v1/api/logout',
+                'login' => 'v1/api/login',
 
-                'session' => 'api/list-session',
-                'session/detail/<id:\d+>' => 'api/detail-session',
-                'session/delete/<id:\d+>' => 'api/delete-session',
-                'session/update' => 'api/update-session',
-                'session/create' => 'api/create-session',
+                'register' => 'v1/api/register',
+
+                'session' => 'v1/api/list-session',
+                'session/detail/<id:\d+>' => 'v1/api/detail-session',
+                'session/delete/<id:\d+>' => 'v1/api/delete-session',
+                'session/update' => 'v1/api/update-session',
+                'session/create' => 'v1/api/create-session',
 
                 '<controller:\w+>/<id:\d+>' => '<controller>/view',
                 '<controller:\w+>/<action:\w+>/<id:\d+>' => '<controller>/<action>',
@@ -94,8 +96,13 @@ $config = [
 
         
     ],
+    'modules' => [
+        'v1' => [
+            'class' => 'app\modules\v1\Module',
+        ],
+    ],
     'params' => $params,
-    'defaultRoute' => 'api/list-session',
+    'defaultRoute' => 'site/index',
 ];
 
 if (YII_ENV_DEV) {

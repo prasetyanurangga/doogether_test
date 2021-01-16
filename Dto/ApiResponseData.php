@@ -3,30 +3,6 @@
 declare(strict_types=1);
 
 namespace app\Dto;
-
-/**
- * @OA\Schema(
- *      schema="Response",
- * )
- * @OA\Schema(
- *      schema="BadResponse",
- *      allOf={
- *          @OA\Schema(ref="#/components/schemas/Response"),
- *          @OA\Schema(
- *              @OA\Property(
- *                  property="status",
- *                  example="failed",
- *              ),
- *              @OA\Property(property="error_message", example="Error description message"),
- *              @OA\Property(property="error_code", nullable=true, example=400),
- *              @OA\Property(
- *                  property="data",
- *                  example=null
- *              ),
- *          )
- *      }
- * )
- */
 final class ApiResponseData
 {
     private int $status = 0;

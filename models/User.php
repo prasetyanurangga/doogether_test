@@ -5,6 +5,48 @@ namespace app\models;
 use Yii;
 use yii\db\ActiveRecord;
 
+/**
+* @SWG\Definition(
+*      definition="UserRegister",
+*      required={"name", "email", "password"},
+*      @SWG\Property(
+*          property="name",
+*          type="string",
+*          description="Name User",
+*          example="Angga"
+*      ),
+*      @SWG\Property(
+*          property="email",
+*          type="string",
+*          description="Email User",
+*          example="angganurprasetya4@gmail.com"
+*      ),
+*      @SWG\Property(
+*          property="password",
+*          type="string",
+*          description="Password User",
+*          example="rahasia"
+*      )
+* )
+
+* @SWG\Definition(
+*      definition="UserLogin",
+*      required={"email", "password"},
+*      @SWG\Property(
+*          property="email",
+*          type="string",
+*          description="Email User",
+*          example="angganurprasetya4@gmail.com"
+*      ),
+*      @SWG\Property(
+*          property="password",
+*          type="string",
+*          description="Password User",
+*          example="rahasia"
+*      )
+* )
+*/
+
 class User extends ActiveRecord
 {
 

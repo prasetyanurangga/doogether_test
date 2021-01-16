@@ -29,7 +29,8 @@
         "symfony/browser-kit": ">=2.7 <=4.2.4",
         "codeception/module-filesystem": "^1.0.0",
         "codeception/module-yii2": "^1.0.0",
-        "codeception/module-asserts": "^1.0.0"
+        "codeception/module-asserts": "^1.0.0",
+        "light/yii2-swagger": "~1.0.4"
     },
     "config": {
         "process-timeout": 1800,
