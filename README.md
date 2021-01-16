@@ -19,7 +19,7 @@ cd doogether_test
 composer install
 ~~~
 
-You can running this project using the following command:
+You can running this application using the following command:
 
 ~~~
 yii serve
