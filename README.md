@@ -28,7 +28,7 @@ yii serve
 You can then access the application through the following URL:
 
 ```
-http://127.0.0.1:8080
+http://localhost:8080
 ```
 
 ## API documentation
@@ -36,5 +36,5 @@ http://127.0.0.1:8080
 API documentation is available at `site/doc`. It is built from Swagger annotations (`@SWG`).
 
 ```
-http://127.0.0.1:8080/site/doc
+http://localhost:8080/site/doc
 ```
